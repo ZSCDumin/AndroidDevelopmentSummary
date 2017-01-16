@@ -1,53 +1,43 @@
-1¡¢Ìí¼Ójar°ü
-
-	dependencies {
-	    compile 'org.litepal.android:core:1.4.1'
-	}
-
-2¡¢ÔÚassetsÎÄ¼ş¼ĞÖĞÌí¼ÓÎÄ¼şlitepal.xml£¨ÓëresÎÄ¼ş¼Ğ²¢ÁĞ£©
-
-	<?xml version="1.0" encoding="utf-8" ?>
-	<litepal>
-	    <dbname value="Book"/>
-	    <version value="1"/>
-	    <list>
-	       <mapping class="com.dumin.zsc.litepaldemo.Book"/>
-	    </list>
-	</litepal>
-
-3¡¢ÔÚAndroidManifestÎÄ¼şÖĞÅäÖÃÓ¦ÓÃ³ÌĞòÃû³Æ
-	<application
-	        android:name="org.litepal.LitePalApplication"
-	        ....
-	        ....
-	</application>
-
-4¡¢Êı¾İ¿â
-
-  £¨1£©´´½¨Êı¾İ¿âÓï¾ä
+ï»¿1ã€æ·»åŠ é—­åŒ…
+		dependencies {
+		    compile 'org.litepal.android:core:1.4.1'
+		}
+2ã€åœ¨assetsæ–‡ä»¶å¤¹ä¸­æ·»åŠ æ–‡ä»¶litepal.xmlï¼ˆä¸resæ–‡ä»¶å¤¹å¹¶åˆ—ï¼‰
+		<?xml version="1.0" encoding="utf-8" ?>
+		<litepal>
+		    <dbname value="Book"/>
+		    <version value="1"/>
+		    <list>
+		       <mapping class="com.dumin.zsc.litepaldemo.Book"/>
+		    </list>
+		</litepal>
+3ã€åœ¨AndroidManifestæ–‡ä»¶ä¸­é…ç½®åº”ç”¨ç¨‹åºåç§°
+		<application
+		        android:name="org.litepal.LitePalApplication"
+		        ....
+		        ....
+		</application>
+4ã€æ•°æ®åº“
+  ï¼ˆ1ï¼‰åˆ›å»ºæ•°æ®åº“è¯­å¥
         Connector.getDatabase();
-
-  £¨2£©´´½¨Êı¾İ±í
-        Book book=new Book();
-	    book.setName("Android");
-	    book.setAuthor("Dumin");
-	    book.setPrice(30);
-	    book.setPages(250);
-	    book.save();
-
-  £¨3£©ĞŞ¸ÄÊı¾İ±í
+  ï¼ˆ2ï¼‰åˆ›å»ºæ•°æ®è¡¨
+	      Book book=new Book();
+		    book.setName("Android");
+		    book.setAuthor("Dumin");
+		    book.setPrice(30);
+		    book.setPages(250);
+		    book.save();
+  ï¼ˆ3ï¼‰ä¿®æ”¹æ•°æ®è¡¨
         Book book2=new Book();
         book2.setName("Android1");
         book2.setAuthor("Dumin1");
         book2.setPrice(30);
         book2.setPages(250);
         book2.update(142);
-
-  £¨4£©É¾³ıÊı¾İ±í
+  ï¼ˆ4ï¼‰åˆ é™¤æ•°æ®è¡¨
         DataSupport.deleteAll(Book.class);
-        DataSupport.delete(Book.class,1);//¸ù¾İIdÀ´É¾³ı
-
-  £¨5£©²éÑ¯Êı¾İ±í
+        DataSupport.delete(Book.class,1);//æ ¹æ®Idæ¥åˆ é™¤
+  ï¼ˆ5ï¼‰æŸ¥è¯¢æ•°æ®è¡¨
         List<Book> books = DataSupport.findAll(Book.class);
         for(Book book1 : books){
             Log.d("MainActivity",book1.getId()+"");
