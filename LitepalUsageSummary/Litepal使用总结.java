@@ -1,22 +1,22 @@
 ﻿1、添加闭包
-		dependencies {
-		    compile 'org.litepal.android:core:1.4.1'
-		}
+	dependencies {
+	    compile 'org.litepal.android:core:1.4.1'
+	}
 2、在assets文件夹中添加文件litepal.xml（与res文件夹并列）
-		<?xml version="1.0" encoding="utf-8" ?>
-		<litepal>
-		    <dbname value="Book"/>
-		    <version value="1"/>
-		    <list>
-		       <mapping class="com.dumin.zsc.litepaldemo.Book"/>
-		    </list>
-		</litepal>
+	<?xml version="1.0" encoding="utf-8" ?>
+	<litepal>
+	    <dbname value="Book"/>
+	    <version value="1"/>
+	    <list>
+	       <mapping class="com.dumin.zsc.litepaldemo.Book"/>
+	    </list>
+	</litepal>
 3、在AndroidManifest文件中配置应用程序名称
-		<application
-		        android:name="org.litepal.LitePalApplication"
-		        ....
-		        ....
-		</application>
+	<application
+		android:name="org.litepal.LitePalApplication"
+		....
+		....
+	</application>
 4、数据库
   （1）创建数据库语句
         Connector.getDatabase();
