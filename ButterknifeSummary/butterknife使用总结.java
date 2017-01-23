@@ -1,13 +1,13 @@
-1¡¢ÅäÖÃÈçÏÂ£º
+ï»¿1ã€é…ç½®å¦‚ä¸‹ï¼š
 
-	 (1)moduleÅäÖÃÈçÏÂ
+	 (1)moduleé…ç½®å¦‚ä¸‹
 	 
 		dependencies {
 		  compile 'com.jakewharton:butterknife:8.4.0'
 		  annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 		}
 
-     (2)Õû¸ö¹¤³ÌÅäÖÃÈçÏÂ
+     (2)æ•´ä¸ªå·¥ç¨‹é…ç½®å¦‚ä¸‹
 
 		buildscript {
 		  repositories {
@@ -26,8 +26,8 @@
 		  annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 		}
    
-2¡¢Ê¹ÓÃÊ¾Àı
-    (1)µ¥¸ömoduleÖĞÊ¹ÓÃµÄ´úÂëÈçÏÂ£º
+2ã€ä½¿ç”¨ç¤ºä¾‹
+    (1)å•ä¸ªmoduleä¸­ä½¿ç”¨çš„ä»£ç å¦‚ä¸‹ï¼š
 	
 		class ExampleActivity extends Activity {
 		  @BindView(R.id.user) EditText username;
@@ -46,11 +46,11 @@
 		  
 		  @UiThread
 		  public void updateUI(){
-			//¸üĞÂUI²Ù×÷
+			//æ›´æ–°UIæ“ä½œ
 		  }
 		}
 		
-	(2)Õû¸ö¹¤³ÌÊ¹ÓÃµÄ´úÂëÈçÏÂ£º
+	(2)æ•´ä¸ªå·¥ç¨‹ä½¿ç”¨çš„ä»£ç å¦‚ä¸‹ï¼š
 	
 	    class ExampleActivity extends Activity {
 		  @BindView(R2.id.user) EditText username;
@@ -58,17 +58,17 @@
 		  ...
 		}
 		
-3¡¢ButterKnifeÓÅÊÆ£º
+3ã€ButterKnifeä¼˜åŠ¿ï¼š
 
-	(1)Ç¿´óµÄView°ó¶¨ºÍClickÊÂ¼ş´¦Àí¹¦ÄÜ£¬¼ò»¯´úÂë£¬ÌáÉı¿ª·¢Ğ§ÂÊ
-	(2)·½±ãµÄ´¦ÀíAdapterÀïµÄViewHolder°ó¶¨ÎÊÌâ
-	(3)ÔËĞĞÊ±²»»áÓ°ÏìAPPĞ§ÂÊ£¬Ê¹ÓÃÅäÖÃ·½±ã
-	(4)´úÂëÇåÎú£¬¿É¶ÁĞÔÇ¿
+	(1)å¼ºå¤§çš„Viewç»‘å®šå’ŒClickäº‹ä»¶å¤„ç†åŠŸèƒ½ï¼Œç®€åŒ–ä»£ç ï¼Œæå‡å¼€å‘æ•ˆç‡
+	(2)æ–¹ä¾¿çš„å¤„ç†Adapteré‡Œçš„ViewHolderç»‘å®šé—®é¢˜
+	(3)è¿è¡Œæ—¶ä¸ä¼šå½±å“APPæ•ˆç‡ï¼Œä½¿ç”¨é…ç½®æ–¹ä¾¿
+	(4)ä»£ç æ¸…æ™°ï¼Œå¯è¯»æ€§å¼º
 
-4¡¢Ê¹ÓÃĞÄµÃ£º
+4ã€ä½¿ç”¨å¿ƒå¾—ï¼š
 
-	(1)Activity ButterKnife.bind(this);±ØĞëÔÚsetContentView();
-	   Ö®ºó,ÇÒ¸¸Ààbind°ó¶¨ºó,×ÓÀà²»ĞèÒªÔÙbind().
+	(1)Activity ButterKnife.bind(this);å¿…é¡»åœ¨setContentView();
+	   ä¹‹å,ä¸”çˆ¶ç±»bindç»‘å®šå,å­ç±»ä¸éœ€è¦å†bind().
 	(2)Fragment ButterKnife.bind(this, mRootView);
-	(3)ÊôĞÔ²¼¾Ö²»ÄÜÓÃprivate or static ĞŞÊÎ£¬·ñÔò»á±¨´í
-	(4)setContentView()²»ÄÜÍ¨¹ı×¢½âÊµÏÖ¡££¨ÆäËûµÄÓĞĞ©×¢½â¿ò¼Ü¿ÉÒÔ£©
+	(3)å±æ€§å¸ƒå±€ä¸èƒ½ç”¨private or static ä¿®é¥°ï¼Œå¦åˆ™ä¼šæŠ¥é”™
+	(4)setContentView()ä¸èƒ½é€šè¿‡æ³¨è§£å®ç°ã€‚ï¼ˆå…¶ä»–çš„æœ‰äº›æ³¨è§£æ¡†æ¶å¯ä»¥ï¼‰

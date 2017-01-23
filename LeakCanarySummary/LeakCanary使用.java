@@ -1,4 +1,4 @@
-1、在模块的 build.gradle 里面配置如下:
+﻿1、在模块的 build.gradle 里面配置如下:
 
       dependencies {
 

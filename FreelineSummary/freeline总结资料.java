@@ -1,24 +1,43 @@
-1¡¢ÔÚ¹¤³ÌµÄbuild.gradleÅäÖÃÈçÏÂ£º
+ï»¿1ã€åœ¨å·¥ç¨‹çš„build.gradleé…ç½®å¦‚ä¸‹ï¼š
 
 	buildscript {
 		repositories {
 			jcenter()
 		}
 		dependencies {
-			classpath 'com.antfortune.freeline:gradle:0.8.4'
+			classpath 'com.antfortune.freeline:gradle:0.8.5'
 		}
 	}
 
-2¡¢ÔÚmoduleµÄbuild.gradleÅäÖÃÈçÏÂ£º
+2ã€åœ¨moduleçš„build.gradleé…ç½®å¦‚ä¸‹ï¼š
 	
 	apply plugin: 'com.antfortune.freeline'
 	android {
 		...
+		
+		freeline {
+          hack true
+        }
 	}
+	dependencies {
+		debugCompile 'com.antfortune.freeline:runtime:0.8.5'
+		releaseCompile 'com.antfortune.freeline:runtime-no-op:0.8.5'
+		testCompile 'com.antfortune.freeline:runtime-no-op:0.8.5'
+    }
+	
+3ã€è‡ªå®šä¹‰çš„Application
 
-3¡¢ÔÚAndroidStudio¿ØÖÆÃæ°åÖĞÊäÈëÏÂÁĞÃüÁî£º
+	 public class App extends Application {
+		 @Override
+		 public void onCreate() {
+			 super.onCreate();
+			 FreelineCore.init(this);
+		 }
+	 }
+	 
+4ã€åœ¨AndroidStudioæ§åˆ¶é¢æ¿ä¸­è¾“å…¥ä¸‹åˆ—å‘½ä»¤ï¼š
 
 	gradlew initFreeline -Pmirror
 	python freeline.py
 	
-    **************×¢ÒâÊÂÏî£ºPython°æ±¾±ØĞëÎª 2.7 < version < 3.0*****************
+    **************æ³¨æ„äº‹é¡¹ï¼šPythonç‰ˆæœ¬å¿…é¡»ä¸º 2.7 < version < 3.0*****************

@@ -3,14 +3,14 @@
 	    compile 'org.litepal.android:core:1.4.1'
 	}
 2、在assets文件夹中添加文件litepal.xml（与res文件夹并列）
-	<?xml version="1.0" encoding="utf-8" ?>
-	<litepal>
-	    <dbname value="Book"/>
-	    <version value="1"/>
-	    <list>
-	       <mapping class="com.dumin.zsc.litepaldemo.Book"/>
-	    </list>
-	</litepal>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <litepal>
+        <dbname value="Book"/>
+        <version value="1"/>
+        <list>
+           <mapping class="com.dumin.zsc.litepaldemo.Book"/>
+        </list>
+    </litepal>
 3、在AndroidManifest文件中配置应用程序名称
 	<application
 		android:name="org.litepal.LitePalApplication"
@@ -21,12 +21,12 @@
   （1）创建数据库语句
         Connector.getDatabase();
   （2）创建数据表
-	      Book book=new Book();
-		    book.setName("Android");
-		    book.setAuthor("Dumin");
-		    book.setPrice(30);
-		    book.setPages(250);
-		    book.save();
+        Book book=new Book();
+        book.setName("Android");
+        book.setAuthor("Dumin");
+        book.setPrice(30);
+        book.setPages(250);
+        book.save();
   （3）修改数据表
         Book book2=new Book();
         book2.setName("Android1");

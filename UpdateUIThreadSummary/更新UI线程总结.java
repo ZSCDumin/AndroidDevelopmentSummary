@@ -1,4 +1,4 @@
-1、使用Handler消息传递机制
+﻿1、使用Handler消息传递机制
 
    （1）主线程中定义Handler：
 

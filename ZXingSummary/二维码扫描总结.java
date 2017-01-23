@@ -1,4 +1,4 @@
-1、在buil.gradle文件中配置如下:
+﻿1、在buil.gradle文件中配置如下:
 
     compile 'com.google.zxing:core:3.1.0'
     compile 'cn.bingoogolapple:bga-qrcodecore:1.0.7@aar'

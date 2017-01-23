@@ -1,31 +1,31 @@
-1¡¢AlertDialogÊ¹ÓÃ·½·¨ÈçÏÂ£º
+ï»¿1ã€AlertDialogä½¿ç”¨æ–¹æ³•å¦‚ä¸‹ï¼š
 
-	(1)Ê¾Àı´úÂë£º
+	(1)ç¤ºä¾‹ä»£ç ï¼š
 	 
 		AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-		dialog.setTitle("¶Ô»°¿ò");
-		dialog.setMessage("ÕıÔÚÉÏ´«Í¼Æ¬...");
+		dialog.setTitle("å¯¹è¯æ¡†");
+		dialog.setMessage("æ­£åœ¨ä¸Šä¼ å›¾ç‰‡...");
 		dialog.setCancelable(true);
-		dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+		dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				//Âß¼­´úÂë
+				//é€»è¾‘ä»£ç 
 			}
 		});
-		dialog.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener() {
+		dialog.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				//Âß¼­´úÂë
+				//é€»è¾‘ä»£ç 
 			}
 		});
 		dialog.show();
 
-2¡¢ProgressDialogÊ¹ÓÃ·½·¨ÈçÏÂ£º
+2ã€ProgressDialogä½¿ç”¨æ–¹æ³•å¦‚ä¸‹ï¼š
 
-	(1)Ê¾Àı´úÂëÈçÏÂ£º
+	(1)ç¤ºä¾‹ä»£ç å¦‚ä¸‹ï¼š
 	
 		ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
-		progressDialog.setTitle("½ø¶ÈÌõ¶Ô»°¿ò£¡");
-		progressDialog.setMessage("ÕıÔÚ¼ÓÔØ...");
-		progressDialog.setCancelable(true);//ÉèÖÃÊÇ·ñÔÊĞíÈ¡Ïû
+		progressDialog.setTitle("è¿›åº¦æ¡å¯¹è¯æ¡†ï¼");
+		progressDialog.setMessage("æ­£åœ¨åŠ è½½...");
+		progressDialog.setCancelable(true);//è®¾ç½®æ˜¯å¦å…è®¸å–æ¶ˆ
 		progressDialog.show();

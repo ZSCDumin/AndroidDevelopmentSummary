@@ -1,4 +1,4 @@
-1、使用Gradle构建时添加一下依赖即可:
+﻿1、使用Gradle构建时添加一下依赖即可:
 
     compile 'org.xutils:xutils:3.3.40'
 

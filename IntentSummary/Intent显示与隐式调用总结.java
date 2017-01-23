@@ -1,79 +1,78 @@
-Ò»¡¢IntentÏÔÊ¾µ÷ÓÃ
+ï»¿ä¸€ã€Intentæ˜¾ç¤ºè°ƒç”¨
 
-   1¡¢·¶Àı´úÂëÈçÏÂ
-        Intent intent=new Intent(MainActivity.this,Main2Activity.class);  //µ±Ç°Activity¡¢ÒªÌø×ªµÄActivity
-        startActivity(intent); //Æô¶¯Activity
-    
-¶ş¡¢IntentÒşÊ½µ÷ÓÃ
+   1ã€èŒƒä¾‹ä»£ç å¦‚ä¸‹
+        Intent intent=new Intent(MainActivity.this,Main2Activity.class);  //å½“å‰Activityã€è¦è·³è½¬çš„Activity
+        startActivity(intent); //å¯åŠ¨Activity
 
-   1¡¢×¢ÒâÊÂÏî
-        IntentÒşÊ½µ÷ÓÃÊ±£¬Ëü²¢²»Ã÷È·Ö¸³öµ÷ÓÃÄÄÒ»¸ö»î¶¯£¬½»ÓÉÏµÍ³È¥·ÖÎöÕÒ³öºÏÊÊµÄ»î¶¯È¥Æô¶¯¡£
-        Ò»¸öIntentÖĞÖ»ÄÜÓĞÒ»¸öaction£¬µ«¿ÉÒÔ°üº¬¶à¸öcategory¡£
-		<category android:name="android.intent.category.DEFAULT"/> //ÕâĞĞ´úÂë²»ÄÜÊ¡ÂÔ£¬·ñÔò»áÔËĞĞ³ö´í
-   
-   2¡¢·¶Àı´úÂëÈçÏÂ
+äºŒã€Intentéšå¼è°ƒç”¨
+
+   1ã€æ³¨æ„äº‹é¡¹
+        Intentéšå¼è°ƒç”¨æ—¶ï¼Œå®ƒå¹¶ä¸æ˜ç¡®æŒ‡å‡ºè°ƒç”¨å“ªä¸€ä¸ªæ´»åŠ¨ï¼Œäº¤ç”±ç³»ç»Ÿå»åˆ†ææ‰¾å‡ºåˆé€‚çš„æ´»åŠ¨å»å¯åŠ¨ã€‚
+        ä¸€ä¸ªIntentä¸­åªèƒ½æœ‰ä¸€ä¸ªactionï¼Œä½†å¯ä»¥åŒ…å«å¤šä¸ªcategoryã€‚
+		<category android:name="android.intent.category.DEFAULT"/> //è¿™è¡Œä»£ç ä¸èƒ½çœç•¥ï¼Œå¦åˆ™ä¼šè¿è¡Œå‡ºé”™
+
+   2ã€èŒƒä¾‹ä»£ç å¦‚ä¸‹
         Intent intent=new Intent("com.dumin.zsc.intentdemo.ACTION_START");
         startActivity(intent);
-		
-   3¡¢AndroidManifestÎÄ¼ş´úÂëÈçÏÂ
+
+   3ã€AndroidManifestæ–‡ä»¶ä»£ç å¦‚ä¸‹
         <activity
             android:name=".Main2Activity">
             <intent-filter>
-                <action android:name="com.dumin.zsc.intentdemo.ACTION_START"/>   //ÉèÖÃÒªÆô¶¯µÄActivity
-                <category android:name="android.intent.category.DEFAULT"/>       //ÉèÖÃÄ¬ÈÏÆô¶¯·½Ê½
+                <action android:name="com.dumin.zsc.intentdemo.ACTION_START"/>   //è®¾ç½®è¦å¯åŠ¨çš„Activity
+                <category android:name="android.intent.category.DEFAULT"/>       //è®¾ç½®é»˜è®¤å¯åŠ¨æ–¹å¼
 				<category android:name="com.dumin.zsc.intentdemo.MY_CATEGORY"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".Main3Activity">
             <intent-filter>
-                <action android:name="com.dumin.zsc.intentdemo.ACTION_START"/>   //ÉèÖÃÒªÆô¶¯µÄActivity
-                <category android:name="android.intent.category.DEFAULT"/>       //ÉèÖÃÄ¬ÈÏÆô¶¯·½Ê½
+                <action android:name="com.dumin.zsc.intentdemo.ACTION_START"/>   //è®¾ç½®è¦å¯åŠ¨çš„Activity
+                <category android:name="android.intent.category.DEFAULT"/>       //è®¾ç½®é»˜è®¤å¯åŠ¨æ–¹å¼
 				<category android:name="com.dumin.zsc.intentdemo.MY_CATEGORY"/>
             </intent-filter>
         </activity>
-		
-		/************************ÏµÍ³»á¸ø³öÁ½¸ö»î¶¯Ñ¡Ôñ¹©ÄãÑ¡Ôñ£¬ÓÉÄã×Ô¼º¾ö¶¨Æô¶¯ÄÄÒ»¸ö»î¶¯**********************/
-		
-   4¡¢IntentÆô¶¯ÆäËû³ÌĞòµÄ»î¶¯
-        (1) µ÷ÓÃÏµÍ³ä¯ÀÀÆ÷´ò¿ª"°Ù¶ÈÊ×Ò³"
-		    //Ö¸¶¨IntentµÄActionÎª£ºIntent.ACTION_VIEW£¬Õâ¸öÊÇ°²×¿ÏµÍ³ÄÚÖÃµÄÒ»¸ö¶¯×÷
+
+		/************************ç³»ç»Ÿä¼šç»™å‡ºä¸¤ä¸ªæ´»åŠ¨é€‰æ‹©ä¾›ä½ é€‰æ‹©ï¼Œç”±ä½ è‡ªå·±å†³å®šå¯åŠ¨å“ªä¸€ä¸ªæ´»åŠ¨**********************/
+
+   4ã€Intentå¯åŠ¨å…¶ä»–ç¨‹åºçš„æ´»åŠ¨
+        (1) è°ƒç”¨ç³»ç»Ÿæµè§ˆå™¨æ‰“å¼€"ç™¾åº¦é¦–é¡µ"
+		    //æŒ‡å®šIntentçš„Actionä¸ºï¼šIntent.ACTION_VIEWï¼Œè¿™ä¸ªæ˜¯å®‰å“ç³»ç»Ÿå†…ç½®çš„ä¸€ä¸ªåŠ¨ä½œ
 			Intent it=new Intent(Intent.ACTION_VIEW);
-			//½«×Ö·û´®½âÎö³ÉUri¶ÔÏó£¬²¢µ÷ÓÃsetData·½·¨½«Õâ¸ö¶ÔÏó´«µİ½øÈ¥
+			//å°†å­—ç¬¦ä¸²è§£ææˆUriå¯¹è±¡ï¼Œå¹¶è°ƒç”¨setDataæ–¹æ³•å°†è¿™ä¸ªå¯¹è±¡ä¼ é€’è¿›å»
 			it.setData(Uri.parse("https://www.baidu.com"));
 			startActivity(it);
-		
-		(2) µ÷ÓÃÏµÍ³²¦ºÅ½çÃæ
+
+		(2) è°ƒç”¨ç³»ç»Ÿæ‹¨å·ç•Œé¢
 		    Intent it = new Intent(Intent.ACTION_DIAL);
             it.setData(Uri.parse("tel:10086"));
             startActivity(it);
-			
-		(3) ÏòÏÂÒ»¸ö»î¶¯´«µİÊı¾İ
-		
-		      MainActivity´úÂëÈçÏÂ£º
-				String data="Hello SecondActivity!";
-				Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-				intent.putExtra("extra_data",data);
-				startActivity(intent);
-				
-			  SecondActivity´úÂëÈçÏÂ£º
-			    Intent intent=getIntent();
-				String data=intent.getStringExtra("extra_data");
-				Log.i("data",data);
-		
-		(4) ÏòÉÏÒ»¸ö»î¶¯·µ»ØÊı¾İ
-		    MainActivity´úÂëÈçÏÂ£º
-			
+
+		(3) å‘ä¸‹ä¸€ä¸ªæ´»åŠ¨ä¼ é€’æ•°æ®
+	        MainActivityä»£ç å¦‚ä¸‹ï¼š
+			String data="Hello SecondActivity!";
+			Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+			intent.putExtra("extra_data",data);
+			startActivity(intent);
+
+		    SecondActivityä»£ç å¦‚ä¸‹ï¼š
+		    Intent intent=getIntent();
+			String data=intent.getStringExtra("extra_data");
+			Log.i("data",data);
+
+		(4) å‘ä¸Šä¸€ä¸ªæ´»åŠ¨è¿”å›æ•°æ®
+		    MainActivityä»£ç å¦‚ä¸‹ï¼š
+
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this,SecondActivity.class);
 				startActivityForResult(intent,1);
 			}
-			
-            //ÔÚSecondActivity±»Ïú»ÙÊ±»á»Øµ÷ÉÏÒ»¸ö»î¶¯µÄonActivityResult()·½·¨
+
+            //åœ¨SecondActivityè¢«é”€æ¯æ—¶ä¼šå›è°ƒä¸Šä¸€ä¸ªæ´»åŠ¨çš„onActivityResult()æ–¹æ³•
 			@Override
 			protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-				//Í¨¹ırequestCodeÅĞ¶ÏÊı¾İÀ´Ô´£¬Í¨¹ıresultCodeÅĞ¶Ï´¦Àí½á¹ûÊÇ·ñ³É¹¦£¬´ÓdataÖĞÈ¡³öÊı¾İ
+				//é€šè¿‡requestCodeåˆ¤æ–­æ•°æ®æ¥æºï¼Œé€šè¿‡resultCodeåˆ¤æ–­å¤„ç†ç»“æœæ˜¯å¦æˆåŠŸï¼Œä»dataä¸­å–å‡ºæ•°æ®
 				switch (requestCode){
 					case 1:
 						if(resultCode==RESULT_OK){
@@ -84,9 +83,9 @@
 					default:
 				}
 			}
-			
-	        SecondActivity´úÂëÈçÏÂ£º
-			
+
+	        SecondActivityä»£ç å¦‚ä¸‹ï¼š
+
 			@Override
 			public void onClick(View v) {
 				Intent intent=getIntent();
