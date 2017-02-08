@@ -129,8 +129,8 @@
     }
 7、更新当前位置信息代码：
     private void requestLocation() {
+		initLocation();
         mLocationClient.start();//开始定位
-        initLocation();
     }
 
     private void initLocation() {
