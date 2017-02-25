@@ -93,3 +93,18 @@
 				setResult(RESULT_OK,intent);
 				finish();
 			}
+
+三、IntentFilter 匹配规则：
+    1、action 匹配规则：
+	   （1）只需要匹配其中的一个就可以，区分大小写。
+	2、category 匹配规则：
+	   （1）可以没有，只需要匹配其中的一个就可以，不区分大小写。
+	3、data 匹配规则：
+	   （1）data由两部分组成：mimeType和URI。//如image/jpeg
+	   （2）URI 结构："<scheme>://<host>:<port>/[<path>|<pathPrefix>|<pathPattern>]"
+	       Scheme：URI模式，比如http、file、content。
+		   Host：主机名，如www.baidu.com。
+		   Port：端口号，比如80。
+		   Path、PathPrefix、PathPattern：表示路径的信息，其中path表示完整的信息；pathprefix也可以表示完整的路径信息，
+		                                  但是它里面包含了通配符"*",代表任意多个字符，由于正则表达式的规范，那么要将 "*" 写成 "\\*" ,
+		                                  "\" 写成 "\\\\" ；pathPrefix表示路径的前缀信息。
