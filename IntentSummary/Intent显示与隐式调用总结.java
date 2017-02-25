@@ -8,11 +8,12 @@
 
    1、注意事项
         Intent隐式调用时，它并不明确指出调用哪一个活动，交由系统去分析找出合适的活动去启动。
-        一个Intent中只能有一个action，但可以包含多个category。
-		<category android:name="android.intent.category.DEFAULT"/> //这行代码不能省略，否则会运行出错
+        一个Intent中可以包含多个action，也可以包含多个category。
+		<category android:name="android.intent.category.DEFAULT"/> //这行代码不能省略，否则会运行出错。默认的category
 
    2、范例代码如下
         Intent intent=new Intent("com.dumin.zsc.intentdemo.ACTION_START");
+		intent.addCategory("com.dumin.zsc.intentdemo.MY_CATEGORY");
         startActivity(intent);
 
    3、AndroidManifest文件代码如下
