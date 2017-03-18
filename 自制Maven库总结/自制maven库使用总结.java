@@ -30,7 +30,7 @@
     uploadArchives {
         repositories.mavenDeployer {
             repository(url: "http://localhost:8081/repository/com.zscdm.utils2017/") {
-                authentication(userName: "zscdumin", password: "Dumin19940919")
+                authentication(userName: "yourusername", password: "yourpassword")
             }
             pom.version = "0.0.3"
             pom.artifactId = "ZSCDumin"
