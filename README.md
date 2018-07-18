@@ -21,7 +21,7 @@
 >+ https://github.com/ZSCDumin/
 
 # 6.推荐优秀书籍PDF版(免费下载)
->+ 'https://github.com/ZSCDumin/GoodBooks
+>+ https://github.com/ZSCDumin/GoodBooks
 
 # 7.觉得赞就打赏我吧
 <img src='https://github.com/ZSCDumin/ZhiXinApp/raw/master/screenshoot/17.png' width=300 height=350 />
